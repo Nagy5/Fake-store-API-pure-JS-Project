@@ -1,0 +1,459 @@
+/* Reset padding and margin for all elements */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* General body styles */
+body {
+    background: #222;
+    /* Dark background for the overall page */
+    color: white;
+    /* White text color for contrast */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Set a modern, sans-serif font */
+}
+
+/* Main container for web content */
+.web {
+    width: 80%;
+    /* Set width to 80% of the viewport */
+    margin: auto;
+    /* Center the container */
+}
+
+/* Header styles */
+.head {
+    text-align: center;
+    /* Center align text */
+    text-transform: uppercase;
+    /* Make text uppercase */
+    margin: 40px 0;
+    /* Add vertical margin */
+}
+
+/* Input fields styling */
+input {
+    width: 100%;
+    /* Full width input */
+    height: 30px;
+    /* Set height */
+    outline: none;
+    /* Remove outline on focus */
+    border: none;
+    /* Remove default border */
+    background: #111;
+    /* Dark background */
+    margin: 10px 0;
+    /* Vertical margin */
+    border-radius: 20px;
+    /* Rounded corners */
+    padding: 4px;
+    /* Inner padding */
+    color: white;
+    /* White text color */
+    text-align: center;
+    /* Center text */
+}
+
+/* Specific styling for min and max price inputs */
+#minPrice,
+#maxPrice {
+    margin-bottom: 4px;
+    /* Bottom margin for spacing */
+}
+
+/* Select dropdown styling */
+select {
+    width: 100%;
+    /* Full width select */
+    height: 30px;
+    /* Set height */
+    outline: none;
+    /* Remove outline */
+    border: none;
+    /* Remove default border */
+    background: #111;
+    /* Dark background */
+    margin: 4px 0px 4px 13px;
+    /* Margin for positioning */
+    border-radius: 4px;
+    /* Rounded corners */
+    padding: 4px;
+    /* Inner padding */
+    color: white;
+    /* White text color */
+    text-align: center;
+    /* Center text */
+}
+
+/* Focus styles for inputs */
+input:focus {
+    background: black;
+    /* Change background on focus */
+    transform: scale(1.1);
+    /* Slightly enlarge the input */
+}
+
+/* Filters section input styling */
+.filters input {
+    margin: 0px 10px;
+    /* Horizontal margin for filter inputs */
+}
+
+/* Styles for displaying total quantity and price */
+#totalQ,
+#totalP {
+    background: transparent;
+    /* Transparent background */
+    padding: 5px 2px;
+    /* Padding for spacing */
+    border-radius: 4px;
+    /* Rounded corners */
+    font-size: 20px;
+    /* Larger font size */
+}
+
+/* Cart section styling */
+#cart {
+    margin-bottom: 30px;
+    /* Space below the cart section */
+}
+
+#cart li {
+    margin-left: 100px;
+    /* Left margin for cart items */
+}
+
+.cart h3 {
+    margin-bottom: 20px;
+    /* Space below cart title */
+}
+
+/* Display styles for total quantity and price */
+#totalQ {
+    display: block;
+    /* Block display */
+    margin-bottom: 10px;
+    /* Space below total quantity */
+}
+
+#totalP {
+    display: block;
+    /* Block display */
+    margin-bottom: 10px;
+    /* Space below total price */
+}
+
+/* Pseudo-elements for labels */
+#totalQ::before {
+    content: "Total Quantity: ";
+    /* Label for total quantity */
+}
+
+#totalP::before {
+    content: "Total Price: ";
+    /* Label for total price */
+}
+
+/* Apply button styling */
+#apply {
+    width: 20%;
+    /* Set width */
+    height: 25px;
+    /* Set height */
+    margin: 6px 41%;
+    /* Center the button */
+    border: none;
+    /* Remove default border */
+    background: green;
+    /* Green background */
+    color: white;
+    /* White text color */
+    border-radius: 20px;
+    /* Rounded corners */
+    font-size: 13px;
+    /* Font size */
+    font-weight: bold;
+    /* Bold text */
+    cursor: pointer;
+    /* Pointer cursor */
+    transition: 0.4s;
+    /* Transition for hover effect */
+}
+
+/* Hover effect for apply button */
+#apply:hover {
+    background: #59cd28cc;
+    /* Change background on hover */
+    letter-spacing: 0.5px;
+    /* Add letter spacing */
+}
+
+
+/* Filters section margin */
+.filters {
+    margin-bottom: 25px;
+    /* Space below filters */
+}
+
+/* Product item text styling */
+.product h3,
+.product p {
+    display: flex;
+    /* Flex display */
+    text-align: center;
+    /* Center text */
+    justify-content: center;
+    /* Center content */
+    color: black;
+    /* Black text color */
+}
+
+/* Container for buttons within product items */
+.buttonContainer {
+    margin-top: 8px;
+    /* Space above button container */
+}
+
+/* Button styles within the product container */
+.buttonContainer button {
+    margin: 0 4px;
+    /* Horizontal margin for buttons */
+    padding: 6px 12px;
+    /* Padding for buttons */
+    cursor: pointer;
+    /* Pointer cursor */
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed positioning */
+    z-index: 1000;
+    /* On top of other content */
+    left: 0;
+    /* Align left */
+    top: -100px;
+    /* Position above viewport initially */
+    width: 100%;
+    /* Full width modal */
+    height: 100%;
+    /* Full height modal */
+}
+
+/* Content styling within the modal */
+.modalContent {
+    background-color: #fefefe;
+    /* Light background for modal */
+    color: black;
+    /* Black text color */
+    margin: 15% auto;
+    /* Center modal content vertically */
+    padding: 20px;
+    /* Padding around content */
+    border: 1px solid #888;
+    /* Border around modal */
+    width: 80%;
+    /* Width of modal content */
+    height: 50%;
+    /* Height of modal content */
+    overflow: auto;
+    /* Allow scrolling if content overflows */
+}
+
+/* Image styling within the modal */
+.modalContent img {
+    max-width: 200px;
+    /* Max width for images */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Block display */
+    margin-bottom: 10px;
+    /* Space below image */
+}
+
+/* Title styling within the modal */
+.modalContent h2 {
+    font-size: 24px;
+    /* Title font size */
+    margin: 0 0 10px 0;
+    /* Margin below title */
+    font-weight: bold;
+    /* Bold title */
+}
+
+/* Paragraph styling within the modal */
+.modalContent p {
+    margin-bottom: 10px;
+    /* Space below paragraphs */
+}
+
+/* Specific styling for additional product info in modal */
+.modalContent #productCategory,
+.modalContent #productPrice,
+.modalContent #productRating {
+    margin-bottom: 10px;
+    /* Space below product info */
+}
+
+/* Close button styling in the modal */
+.close {
+    color: #aaa;
+    /* Light gray color */
+    float: right;
+    /* Align to the right */
+    font-size: 28px;
+    /* Font size */
+    font-weight: bold;
+    /* Bold text */
+}
+
+/* Hover effect for close button */
+.close:hover,
+.close:focus {
+    color: black;
+    /* Darker color on hover */
+    text-decoration: none;
+    /* Remove underline */
+    cursor: pointer;
+    /* Pointer cursor */
+}
+
+/* Container for outputting product items */
+.outputs {
+    display: flex;
+    /* Flex display for products */
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+    justify-content: space-between;
+    /* Space products evenly */
+}
+
+/* Individual product item styling */
+.product {
+    background-color: #fff;
+    /* White background for products */
+    flex: 0 1 calc(33.33% - 10px);
+    /* Three items per row with spacing */
+    margin-bottom: 20px;
+    /* Space below each product */
+    box-sizing: border-box;
+    /* Include padding/border in width */
+}
+
+/* Image styling within product items */
+.product img {
+    width: 100%;
+    /* Responsive image */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Button container styling within product items */
+.buttonContainer {
+    display: flex;
+    /* Flex display */
+    gap: 10px;
+    /* Space between buttons */
+    justify-content: center;
+    /* Center buttons */
+}
+
+/* Description button styling */
+.descButton {
+    background-color: rgb(23, 161, 221);
+    /* Color for description button */
+    color: white;
+    /* White text */
+    border: 2px solid white;
+    /* White border */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+/* Hover effect for description button */
+.descButton:hover {
+    background-color: transparent;
+    /* Transparent background on hover */
+    border: 2px solid rgb(23, 161, 221);
+    /* Border color on hover */
+    color: rgb(23, 161, 221);
+    /* Text color on hover */
+    cursor: pointer;
+    /* Pointer cursor */
+}
+
+/* Cart button styling */
+.cartButton {
+    background-color: #00cdd4;
+    /* Color for cart button */
+    color: white;
+    /* White text */
+    border: 2px solid white;
+    /* White border */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+/* Hover effect for cart button */
+.cartButton:hover {
+    background-color: transparent;
+    /* Transparent background on hover */
+    border: 2px solid #00cdd4;
+    /* Border color on hover */
+    color: #00cdd4;
+    /* Text color on hover */
+    cursor: pointer;
+    /* Pointer cursor */
+}
+
+/* Pagination container styling */
+.pagination {
+    display: flex;
+    /* Flex display for pagination buttons */
+    justify-content: center;
+    /* Center pagination buttons */
+    gap: 2px;
+    /* Space between buttons */
+}
+
+/* Pagination button styling */
+.pagination button {
+    width: 4%;
+    /* Set width */
+    background-color: transparent;
+    /* Transparent background */
+    color: white;
+    /* White text */
+    border: 2px solid rgb(58, 134, 216);
+    /* Border color */
+}
+
+/* Styles for next and previous buttons in pagination */
+.pagination .next,
+.pagination .prev {
+    background-color: rgb(58, 134, 216);
+    /* Color for next/prev buttons */
+    color: white;
+    /* White text */
+}
+
+/* Cart container styling */
+.pCartContainer {
+    display: flex;
+    /* Flex display for cart */
+    gap: 20px;
+    /* Space between cart items */
+}
+
+/* Active pagination button styling */
+.pagination button.active {
+    background-color: rgb(58, 134, 216);
+    /* Background for active button */
+    color: white;
+    /* White text */
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design settings -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file for styling -->
+    <title>Document</title> <!-- Title of the document -->
+</head>
+
+<body>
+    <div class="web"> <!-- Main container for the web content -->
+        <div class="head"> <!-- Header section -->
+            <h1>my market</h1> <!-- Main title -->
+        </div>
+        <div class="inputs"> <!-- Container for input elements -->
+            <div class="filters"> <!-- Filters section for product search -->
+                <input type="search" id="search" placeholder="Search for products..."> <!-- Search input field -->
+                <select name="categories" id="categories"> <!-- Dropdown for product categories -->
+                    <option value="" disabled selected>All Categories</option> <!-- Default option -->
+                    <option id="cat1" value="men's clothing">men's clothing</option> <!-- Category option -->
+                    <option id="cat2" value="jewelery">jewelery</option> <!-- Category option -->
+                    <option id="cat3" value="electronics">electronics</option> <!-- Category option -->
+                    <option id="cat4" value="women's clothing">women's clothing</option> <!-- Category option -->
+                </select>
+                <select name="Sort" id="sort" placeholder="Sort by..."> <!-- Dropdown for sorting options -->
+                    <option value="" disabled selected>Sort by...</option> <!-- Default option -->
+                    <option id="sortPrice" value="price-asc">low-to-high price</option> <!-- Sorting option -->
+                    <option id="sortPrice" value="price-desc">high-to-low price</option> <!-- Sorting option -->
+                    <option id="sortRating" value="rating-asc">low-to-high rating</option> <!-- Sorting option -->
+                    <option id="sortRating" value="rating-desc">high-to-low rating</option> <!-- Sorting option -->
+                </select>
+                <input type="number" id="minPrice" placeholder="min price"> <!-- Minimum price input field -->
+                <input type="number" id="maxPrice" placeholder="max price"> <!-- Maximum price input field -->
+                <button id="apply">Apply Filters</button> <!-- Button to apply selected filters -->
+            </div>
+            <div class="cart"> <!-- Shopping cart section -->
+                <h3>Shopping Cart</h3> <!-- Cart title -->
+                <ul id="cart"> <!-- Unordered list to display cart items -->
+                </ul>
+            </div>
+            <small id="totalQ"></small> <!-- Element to display total quantity of items in the cart -->
+            <small id="totalP"></small> <!-- Element to display total price of items in the cart -->
+        </div>
+        <div class="outputs"> <!-- Container for displaying product outputs -->
+        </div>
+        <div class="pagination"></div> <!-- Pagination controls for navigating product pages -->
+
+        <script src="main.js"></script> <!-- Link to the external JavaScript file for functionality -->
+    </div>
+</body>
+
+</html>
